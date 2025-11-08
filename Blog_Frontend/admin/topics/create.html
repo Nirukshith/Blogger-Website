@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Section - Add Topic</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/38.1.1/classic/ckeditor.js"></script>
+
+    <!-- font awesome-->
+     <script src="https://kit.fontawesome.com/1350ce7307.js" crossorigin="anonymous"></script>
+
+    <!-- font -->
+
+    <!-- custom styling -->
+     <link rel="stylesheet" href="../../css/blog.css">
+
+    <!-- admin styling -->
+     <link rel="stylesheet" href="../../css/admin.css">    
+</head>
+<body>
+    <header>
+        <div  class="logo">
+            <h1 class="logo-text"><span>Truman</span> Writes</h1>
+        </div>
+        <i class="menu-toggle fa fa-bars" id="menu-toggle" ></i>
+        <ul class="nav" id="nav">
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    Nirukshith
+                    <i class="fa fa-chevron-down"></i>
+                </a>
+                <ul>
+                    <li> <a href="#">Logout</a> </li>
+                </ul>
+            </li>
+        </ul>
+
+
+    </header>
+    <!--Admin page wrapper -->
+    <div class="admin-wrapper">
+        <!-- left sidebar -->
+         <div class="left-sidebar">
+            <ul>
+                <li><a href="../posts/index.html">Manage Posts</a></li>
+                <li><a href="../users/index.html">Manage Users</a></li>
+                <li><a href="index.html">Manage Topics</a></li>
+            </ul>
+
+         </div>
+
+        <!-- //left sidebar -->
+
+        <!-- Admin content -->
+         <div class="admin-content">
+            <div class="button-group">
+                <a href="create.html" class="btn btn-big">Add Topic</a>
+                <a href="index.html" class="btn btn-big">Manage Topics</a>
+            </div> 
+
+            <div class="conent">
+                <h2 class="page-title">Add Topics</h2>
+                
+                <form action="create.html" method="post">
+                    <div>
+                        <label>Name</label>
+                        <input type="text" name="name" class="text-input">
+                    </div>
+                    <div>
+                        <label>Description</label>
+                        <textarea id="body" name="Description"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-big">Add Topic</button>
+                    </div>
+                </form>
+            </div>
+
+         </div>
+        <!-- //Admin content -->
+
+
+    
+
+    </div>
+    <!-- //Admin page wrapper -->
+
+
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- ckEditor -->
+         <script>
+            ClassicEditor
+                .create(document.querySelector("#body"), {
+                    toolbar: [
+                        'heading', '|', 'bold', 'italic', 'fontSize', 'fontFamily', 'fontColor',
+                        '|', 'link', 'bulletedList', 'numberedList', 'blockQuote'
+                    ]
+                })
+                .catch(error => console.error(error));
+            </script>
+
+        <!-- script -->
+        <script src="blog.js"></script>
+    
+</body>
+</html>

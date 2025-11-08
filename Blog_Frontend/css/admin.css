@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lato:wght@300;400;700&family=Bebas+Neue&family=DM+Sans:wght@400;700&display=swap');
+
+.admin-wrapper{
+    display: flex;
+    height: 100vh;
+}
+
+/* Responsive admin: stack on small screens and allow table scrolling */
+@media (max-width: 900px) {
+    .admin-wrapper{ flex-direction: column; height: auto; }
+    .admin-wrapper .left-sidebar{ width: 100%; height: auto; }
+    .admin-wrapper .admin-content{ width: 100%; padding: 20px; height: auto; }
+    .admin-content table{ display: block; width: 100%; overflow-x: auto; }
+}
+
+.admin-wrapper .left-sidebar{
+    flex: 2.3;
+    height: 100%;
+    background-color: rgb(35, 117, 73);
+
+}
+
+.admin-wrapper .admin-content{
+    flex: 7.7;
+    height: 100%;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+}
+
+
+.admin-wrapper .left-sidebar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+.admin-wrapper .left-sidebar ul li a{
+    color: white;
+    display: block;
+    padding: 18px;
+    border-bottom: 1px solid rgb(24, 87, 53);
+}
+
+.admin-wrapper .left-sidebar ul li a:hover{
+    background-color:  rgb(23, 97, 57);
+}
+
+.admin-content .page-title{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.1rem;
+}
+
+th,td{
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    font-family: 'DM Sans', sans-serif;
+
+}
+
+.edit{
+    color: green;
+}
+
+.delete{
+    color: red;
+}
+
+.publish{
+    color: rgb(14, 33, 141);
+}
+
+.edit:hover,
+.delete:hover,
+.publish:hover{
+    text-decoration: underline;
+}
+
+a{
+    font-family: 'Poppins', sans-serif;
+}
+
+form div{
+    margin-bottom: 15px;
+}
+
+
+
+
